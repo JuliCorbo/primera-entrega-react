@@ -20,7 +20,7 @@ const Navbar = () =>{
             </ul>
 
             {/* react icons */}
-            <AiOutlineShoppingCart size={70}/>
+            <AiOutlineShoppingCart size={72}/>
         </div>
     )
 
