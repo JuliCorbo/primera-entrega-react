@@ -1,0 +1,12 @@
+.contenedor-navbar{
+    background-color:lightblue;
+    display: flex;
+    justify-content:space-around;
+    
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
