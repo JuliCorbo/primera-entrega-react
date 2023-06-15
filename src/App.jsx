@@ -1,22 +1,30 @@
-import Navbar from "./components/layout/Navbar/Navbar"
-import FetchingDeDatosContenedor from "./components/page/fetchingDeDatos/FetchingDeDatosContenedor"
-import ProductList from "./components/page/productList/ProductList"
-import { ProductListPresentacional } from "./components/page/productList/ProductListPresentacional"
+import Layout from "./components/layout/Layout";
 
+import CartContainer from "./components/page/cart/CartContainer";
+import ProductDetailContainer from "./components/page/cart/productDetail/ProductDetailContainer";
+import ProductListContainer from "./components/page/productList/ProductListContainer";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const app = () =>{
-    return (
-        <div>
-            
-            <Navbar/>
-            <ProductListPresentacional/>
-           <FetchingDeDatosContenedor/>
-           <ProductList/>
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<ProductListContainer />} />
 
-        </div>
-     
-    )
-}
+          <Route path="/category/:categoryName" element={<ProductListContainer />} />
 
-export default app
+          <Route path="/itemDetail/:id" element={<ProductDetailContainer />} />
+          
+          <Route path="/carrito" element={<CartContainer />} />
+        </Route>
+
+        <Route path="*" element={<h1>Error</h1>} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default App;
+

@@ -1,0 +1,21 @@
+.cards-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-image: url("https://images5.alphacoders.com/701/thumb-1920-701401.jpg");
+    min-height: 100vh;
+}
+.detailProduct{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:80px;
+    
+
+}
+
+.detailProduct img {
+    width: 500px;
+}

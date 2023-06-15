@@ -1,26 +1,30 @@
-import { Button } from "@mui/material"
+// import { Button } from "@mui/material"
 import "./Navbar.css"
-import {AiOutlineShoppingCart} from "react-icons/ai"
+import { Badge } from "@mui/material";
+import { BsFillCartCheckFill } from "react-icons/bs";
 
+import { Link } from "react-router-dom";
 const Navbar = () =>{
 
     return(
-        <div className="contenedor-navbar">
-            <img src="" alt="" />
-            <ul className="menu">
-            <Button href="/" variant="contained">
-                    Shop
-            </Button>
-            <Button href="/" variant="contained">
-                     Ofertas
-            </Button>
-            <Button href="/" variant="contained">
-                    Nuevos
-            </Button>
-            </ul>
+        <div className="containerNavbar">
+            
+         
+                <Link to="/">Inicio</Link>
+           <Link to="/category/Filtros">Filtros</Link>
+           <Link to="/category/Escapes">Escapes</Link>
+           <Link to="/category/Valvulas">Valvulas</Link>
+           <Link to="/category/Rodados">LLantas</Link>
+            
+           
 
             {/* react icons */}
-            <AiOutlineShoppingCart size={72}/>
+          
+            
+          <Badge badgeContent={7} color="primary">
+            <BsFillCartCheckFill size="30px" />
+          </Badge>
+        
         </div>
     )
 
